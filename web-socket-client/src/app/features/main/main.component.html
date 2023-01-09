@@ -1,0 +1,16 @@
+<div class="container" *ngIf="!user; else logged">
+    <a [routerLink]="homeRouter[0].link" mat-button mat-raised-button>{{ homeRouter[0].label }}</a>
+    <a [routerLink]="homeRouter[1].link" mat-button mat-raised-button>{{ homeRouter[1].label }}</a>
+    <a [routerLink]="homeRouter[2].link" mat-button mat-raised-button>{{ homeRouter[2].label }}</a>
+</div>
+
+<ng-template #logged>
+    <div class="container">
+        <h3>
+            Welcome, <b>{{ user.username }}</b>
+        </h3>
+        <button (click)="logout()" mat-button mat-raised-button>Logout</button>
+        <a routerLink="/rooms"  mat-button mat-raised-button>Rooms</a>
+        <a routerLink="/settings"  mat-button mat-raised-button>Settings</a>
+    </div>
+</ng-template>

@@ -1,0 +1,39 @@
+@import 'bootstrap';
+
+body {
+  background-color: #f3f3f3;
+}
+
+.full-width {
+  width: 100%;
+}
+
+mat-card-footer {
+  margin: 5px;
+}
+
+.position-absolute {
+  position: absolute !important;
+  z-index: 3;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.flex-grow {
+  flex: 1 1 0;
+}
+
+body,
+html,
+app-root,
+ng-component {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 100%;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
